@@ -13,16 +13,6 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: 'AIzaSyCkGbRUP9IibHnI-sXJ56k0lpA7kjDKs6E',
-  authDomain: 'addad-86a90.firebaseapp.com',
-  databaseURL: 'https://addad-86a90-default-rtdb.firebaseio.com',
-  projectId: 'addad-86a90',
-  storageBucket: 'addad-86a90.appspot.com',
-  messagingSenderId: '725230972104',
-  appId: '1:725230972104:web:70725fe5fe96174f1b49fd',
-  measurementId: 'G-EF50S5TM6V',
-};
 
 @Module({
   imports: [
