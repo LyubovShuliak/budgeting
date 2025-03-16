@@ -25,8 +25,8 @@ export class Price {
     type: 'numeric',
   })
   quantity: number;
-  @Column({ type: 'int', unique: false, name: 'price' })
-  price: string;
+  @Column({ type: 'numeric', unique: false, name: 'price' })
+  price: number;
   @ManyToOne(() => ItemName, (item) => item.prices)
   @JoinColumn({ name: 'item_id' })
   item: ItemName;

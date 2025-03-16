@@ -19,18 +19,25 @@ export class ShoppingHistoryController {
   ) {}
 
   @Post()
-  create(@Body() createShoppingHistoryDto: CreateShoppingHistoryDto) {
-    return this.shoppingHistoryService.create(createShoppingHistoryDto);
+  async create(@Body() createShoppingHistoryDto: CreateShoppingHistoryDto[]) {
+    return await this.shoppingHistoryService.create(createShoppingHistoryDto);
+  }
+  @Post('one')
+  async createHistory(
+    @Body() createShoppingHistoryDto: CreateShoppingHistoryDto,
+  ) {
+    return await this.shoppingHistoryService.createHistoryItem(
+      createShoppingHistoryDto,
+    );
   }
 
-  @Get()
+  @Get('/tags-item')
   findAll() {
-    return this.shoppingHistoryService.findAll();
+    return this.shoppingHistoryService.findAllItems();
   }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.shoppingHistoryService.findOne(+id);
+  @Get('/tags')
+  findAllTags() {
+    return this.shoppingHistoryService.findTags();
   }
 
   @Patch(':id')

@@ -1,5 +1,5 @@
 import Switch from 'components/switch';
-
+import React from 'react';
 const SwitchField = (props: {
   id: string;
   label: string;

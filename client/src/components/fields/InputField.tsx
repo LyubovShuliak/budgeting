@@ -3,31 +3,48 @@ import React from 'react';
 
 function InputField(props: {
   id: string;
-  label: string;
+  label?: string;
   extra: string;
   placeholder: string;
   variant: string;
   state?: string;
   disabled?: boolean;
   type?: string;
+  value?: string;
+  onChange?: any;
 }) {
-  const { label, id, extra, type, placeholder, variant, state, disabled } =
-    props;
+  const {
+    label,
+    value,
+    id,
+    extra,
+    type,
+    placeholder,
+    variant,
+    state,
+    disabled,
+    onChange,
+  } = props;
 
   return (
     <div className={`${extra}`}>
-      <label
-        htmlFor={id}
-        className={`text-sm text-navy-700 dark:text-white ${
-          variant === 'auth' ? 'ml-1.5 font-medium' : 'ml-3 font-bold'
-        }`}
-      >
-        {label}
-      </label>
+      {label ? (
+        <label
+          htmlFor={id}
+          className={`text-sm text-navy-700 dark:text-white ${
+            variant === 'auth' ? 'ml-1.5 font-medium' : 'ml-3 font-bold'
+          }`}
+        >
+          {label}
+        </label>
+      ) : null}
+
       <input
+        onChange={onChange}
         disabled={disabled}
         type={type}
         id={id}
+        value={value}
         placeholder={placeholder}
         className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none ${
           disabled === true

@@ -1,5 +1,6 @@
 import AdminLayout from 'layouts/admin';
 import AuthLayout from 'layouts/auth';
+import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (

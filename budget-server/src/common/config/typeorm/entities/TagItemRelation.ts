@@ -1,9 +1,15 @@
-import { Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
-import { Tags } from './Tags';
 import { ItemName } from './ItemName';
+import { Tags } from './Tags';
 
-@Entity({ database: process.env.DATABASE_NAME, name: 'items' })
+@Entity({ database: process.env.DATABASE_NAME, name: 'tag_item' })
 export class TagItemRelation {
   @PrimaryGeneratedColumn()
   id: number;
@@ -11,7 +17,7 @@ export class TagItemRelation {
   @OneToOne(() => Tags, {})
   @JoinColumn({ name: 'tag_id' })
   tag: Tags;
-  @OneToOne(() => ItemName, {})
+  @ManyToOne(() => ItemName, (item) => item.item)
   @JoinColumn({ name: 'item_id' })
   item: ItemName;
 }

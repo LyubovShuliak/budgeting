@@ -7,6 +7,7 @@ import NFt4 from 'assets/img/nfts/Nft4.png';
 import NFt5 from 'assets/img/nfts/Nft5.png';
 import NFt6 from 'assets/img/nfts/Nft6.png';
 import NftCard from 'components/card/NftCard';
+import React from 'react';
 import tableDataTopCreators from 'views/admin/marketplace/variables/tableDataTopCreators';
 
 import Banner from './components/Banner';

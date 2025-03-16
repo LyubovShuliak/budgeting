@@ -12,6 +12,7 @@ import { Price } from './entities/Price';
 import { ShoppingList } from './entities/ShoppingList';
 import { TagItemRelation } from './entities/TagItemRelation';
 import { Tags } from './entities/Tags';
+import { User } from './entities/User';
 
 export const getTypeOrmModuleOptions = (
   config: EnvironmentConfigService,
@@ -22,7 +23,15 @@ export const getTypeOrmModuleOptions = (
   username: config.getDatabaseUser(),
   password: config.getDatabasePassword(),
   database: config.getDatabaseName(),
-  entities: [History, ItemName, ShoppingList, Tags, Price, TagItemRelation],
+  entities: [
+    History,
+    ItemName,
+    ShoppingList,
+    Tags,
+    Price,
+    TagItemRelation,
+    User,
+  ],
   migrations: [],
   migrationsRun: true,
   // cache: false,

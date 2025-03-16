@@ -1,3 +1,4 @@
+import React from 'react';
 const NotificationIcon = () => {
   return (
     <span className="cursor-pointer">

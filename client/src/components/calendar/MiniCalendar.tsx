@@ -2,6 +2,7 @@ import 'react-calendar/dist/Calendar.css';
 import 'assets/css/MiniCalendar.css';
 
 import Card from 'components/card';
+import React from 'react';
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
@@ -13,7 +14,7 @@ const MiniCalendar = () => {
     <div>
       <Card extra="flex w-full h-full flex-col px-3 py-3">
         <Calendar
-          onChange={onChange}
+          onChange={(value, event) => onChange(value as Date)}
           value={value}
           prevLabel={<MdChevronLeft className="ml-1 h-6 w-6 " />}
           nextLabel={<MdChevronRight className="ml-1 h-6 w-6 " />}

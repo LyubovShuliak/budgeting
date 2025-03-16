@@ -1,9 +1,17 @@
 import Footer from 'components/footer/Footer';
 import Navbar from 'components/navbar';
 import Sidebar from 'components/sidebar';
-import React from 'react';
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 import routes from 'routes';
+
+import { useAppSelector } from '../../app/store';
 
 export default function Admin(props: { [x: string]: any }) {
   const { ...rest } = props;
@@ -57,10 +65,17 @@ export default function Admin(props: { [x: string]: any }) {
   };
 
   document.documentElement.dir = 'ltr';
+  const user = useAppSelector((state) => state.user.user);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!user?.email) {
+      navigate('/auth/sign-in');
+    }
+  }, [user]);
   return (
     <div className="flex h-full w-full">
       <Sidebar open={open} onClose={() => setOpen(false)} />
-      {/* Navbar & Main Content */}
+
       <div className="h-full w-full bg-lightPrimary dark:!bg-navy-900">
         {/* Main Content */}
         <main

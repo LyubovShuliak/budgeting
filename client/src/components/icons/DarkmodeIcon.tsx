@@ -1,3 +1,4 @@
+import React from 'react';
 const DarkmodeIcon = () => {
   return (
     <span className="cursor-pointer">

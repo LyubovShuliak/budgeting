@@ -1,7 +1,7 @@
 import avatar from 'assets/img/avatars/avatar11.png';
 import banner from 'assets/img/profile/banner.png';
 import Card from 'components/card';
-
+import React from 'react';
 const Banner = () => {
   return (
     <Card extra={'items-center w-full h-full p-[16px] bg-cover'}>

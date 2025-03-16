@@ -1,5 +1,6 @@
-import { ShoppingListTable } from './components/ShoppingListTable';
+import React from 'react';
 
+import { ShoppingListTable } from './components/ShoppingListTable';
 export const ShoppingList = () => {
   return (
     <div className="mt-3 grid h-full grid-cols-1 gap-5 xl:grid-cols-2 2xl:grid-cols-3">

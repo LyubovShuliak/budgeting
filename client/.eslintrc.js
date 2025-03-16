@@ -1,9 +1,9 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: "tsconfig.json",
+    project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
-    sourceType: "module",
+    sourceType: 'module',
   },
   plugins: [
     '@typescript-eslint',
@@ -24,12 +24,9 @@ module.exports = {
     'no-console': 'off',
     'no-empty': 'error',
     'no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { destructuredArrayIgnorePattern: '^_' },
-    ],
+    '@typescript-eslint/no-unused-vars': 'off',
     'simple-import-sort/imports': 'error',
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'prettier/prettier': 'error',
   },

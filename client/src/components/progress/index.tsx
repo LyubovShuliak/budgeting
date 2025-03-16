@@ -1,3 +1,4 @@
+import React from 'react';
 const Progress = (props: {
   value: number;
   color?:

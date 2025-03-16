@@ -1,7 +1,7 @@
 import Card from 'components/card';
 import { useState } from 'react';
+import React from 'react';
 import { IoHeart, IoHeartOutline } from 'react-icons/io5';
-
 const NftCard = (props: {
   image: string;
   title: string;

@@ -35,6 +35,10 @@ $ npm install
 ## Running the app
 
 ```bash
+#start ssh
+ssh liubov@192.168.99.169
+#password  Shuly9263
+$ npm run start
 # development
 $ npm run start
 

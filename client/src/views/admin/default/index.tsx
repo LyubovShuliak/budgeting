@@ -1,5 +1,6 @@
 import MiniCalendar from 'components/calendar/MiniCalendar';
 import Widget from 'components/widget/Widget';
+import React from 'react';
 import { IoMdHome } from 'react-icons/io';
 import { IoDocuments } from 'react-icons/io5';
 import { MdBarChart, MdDashboard } from 'react-icons/md';

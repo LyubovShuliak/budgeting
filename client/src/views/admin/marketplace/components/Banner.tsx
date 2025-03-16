@@ -1,5 +1,5 @@
 import nft1 from 'assets/img/nfts/NftBanner1.png';
-
+import React from 'react';
 const Banner1 = () => {
   return (
     <div

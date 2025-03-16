@@ -1,5 +1,5 @@
 import Card from 'components/card';
-import LineChart from 'components/charts/LineChart';
+import React from 'react';
 import {
   MdArrowDropUp,
   MdBarChart,
@@ -9,7 +9,6 @@ import {
   lineChartDataTotalSpent,
   lineChartOptionsTotalSpent,
 } from 'variables/charts';
-
 const TotalSpent = () => {
   return (
     <Card extra="!p-[20px] text-center">
@@ -36,12 +35,7 @@ const TotalSpent = () => {
             </div>
           </div>
         </div>
-        <div className="h-full w-full">
-          <LineChart
-            chartOptions={lineChartOptionsTotalSpent}
-            chartData={lineChartDataTotalSpent}
-          />
-        </div>
+        <div className="h-full w-full"></div>
       </div>
     </Card>
   );

@@ -5,7 +5,9 @@ import { EnvironmentConfigService } from './common/config/environment-config/env
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    cors: { origin: 'http://localhost:3000' },
+  });
   const configService = new ConfigService();
   const config = new EnvironmentConfigService(configService);
 

@@ -1,3 +1,4 @@
+import React from 'react';
 const Checkbox = (props: {
   extra?: string;
   color?:

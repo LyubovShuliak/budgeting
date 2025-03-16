@@ -1,3 +1,4 @@
+import React from 'react';
 const ThemsIcon = () => {
   return (
     <span className="cursor-pointer">

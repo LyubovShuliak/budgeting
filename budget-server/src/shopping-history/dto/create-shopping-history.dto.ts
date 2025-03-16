@@ -6,10 +6,21 @@ export class CreateShoppingHistoryDto {
   @IsString()
   @ApiProperty({ example: 'name', description: 'name' })
   name: string;
+  @IsString()
+  @ApiProperty({
+    example: 'name',
+    description: 'name',
+    enum: ['kg', 'package', 'piece'],
+  })
+  measurement: string;
   @IsNotEmpty()
   @IsNumber()
   @ApiProperty({ example: 10.56, description: 'Item price' })
   price: number;
+  @IsNotEmpty()
+  @IsNumber()
+  @ApiProperty({ example: 10.56, description: 'Item quantity' })
+  quantity: number;
   @IsNotEmpty()
   @IsString()
   @ApiProperty({ example: 'date', description: 'date' })

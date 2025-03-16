@@ -6,7 +6,7 @@ import type { ShoppingItem } from './types';
 export const shoppingListApi = createApi({
   reducerPath: 'shoppingListApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:8000/shopping-list/',
+    baseUrl: 'http://localhost:8080/shopping-list/',
   }),
   endpoints: (builder) => ({
     getItemByName: builder.query<ShoppingItem, string>({

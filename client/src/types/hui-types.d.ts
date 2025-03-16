@@ -14,3 +14,8 @@ declare global {
     secondary?: boolean;
   }
 }
+declare global {
+  interface Window {
+    google: any;
+  }
+}
